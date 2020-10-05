@@ -1,0 +1,11 @@
+# sqlsrv Variables
+sqlsrv_version              = "12.0"
+sqlsrv_ad_login             = "david-security-group"
+sqlsrv_ad_admin_group       = "admin"
+sqlsrv_administrator_login  = "sqlsrv_administrator_login"
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+project_name                = "testproject"
+short_project_name          = "test"
+env_code                    = "dv"
+resource_deploy             = true
+location_code               = "ne"

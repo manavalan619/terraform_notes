@@ -1,0 +1,27 @@
+# Data values
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+resource_deploy             = true
+resource_depends_on         = ""
+#sta
+project_name                                 = "testproject"
+short_project_name                           = "test"
+env_code                                     = "dv"
+sta_output_error_policy                      = "Drop"
+sta_events_out_of_order_policy               = "Adjust"
+sta_events_out_of_order_max_delay_in_seconds = "50"
+sta_events_late_arrival_max_delay_in_seconds = "60"
+sta_streaming_units                          = "3"
+sta_transformation_query                     = "SELECT	* INTO Output FROM Input"
+sta_with_managed_identity_deployment_name    = "acctesttemplate-01"
+sta_data_locale                              = "en-GB"
+sta_compatibility_level                      = "1.1"
+location_code                                = "ne"
+# sta_inputeventhub
+aehcg_name                                  = "example-consumergroup"
+aeh_name                                    = "example-eventhub"
+aehn_name                                   = "example-namespace"
+sta_inputeventhub_name                      = "eventhub-stream-input"
+sta_inputeventhub_shared_access_policy_key  = "pSSRHll3l/S00nMjBl69EMeNm+maMjqqQYRiZuz3fOE="
+sta_inputeventhub_shared_access_policy_name = "RootManageSharedAccessKey"
+sta_inputeventhub_serialization_type        = "Json"
+sta_inputeventhub_serialization_encoding    = "UTF8"

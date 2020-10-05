@@ -1,0 +1,55 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sta_job_name": {
+            "defaultValue": "sta-mystreamanalyticsjob-dv",
+            "type": "string"
+          },
+          "sta_output_adls_name": {
+            "defaultValue": "adls_output",
+            "type": "string"
+          },
+          "sta_output_adls_file_Path_Prefix": {
+            "defaultValue": "/Total/TGS/HQ/STAGING/DEF/DV",
+            "type": "string"
+          },
+          "adls_name": {
+            "defaultValue": "idl0dls0dv0noeu",
+            "type": "string"
+          }
+    },
+    "variables": {},
+    "resources": [
+        {
+            "type": "Microsoft.StreamAnalytics/streamingjobs/outputs",
+            "apiVersion": "2019-06-01",
+            "name": "[concat(parameters('sta_job_name'),'/', parameters('sta_output_adls_name'))]",
+            "properties": {
+                "datasource": {
+                    "type": "Microsoft.DataLake/Accounts",
+                    "properties": {
+                        "filePathPrefix": "[parameters('sta_output_adls_file_Path_Prefix')]",
+                        "accountName": "[parameters('adls_name')]",
+                        "dateFormat": "yyyy/MM/dd",
+                        "timeFormat": "HH",
+                        "authenticationMode": "Msi"
+                    }
+                },
+                "serialization": {
+                    "type": "Json",
+                    "properties": {
+                        "encoding": "UTF8",
+                        "format": "LineSeparated"
+                    }
+                }
+            }
+        }
+    ],
+    "outputs": {
+        "sta_output_adls_id": {
+            "type": "string",
+            "value": "[trim(resourceId('Microsoft.StreamAnalytics/streamingjobs/outputs', parameters('sta_job_name'), parameters('sta_output_adls_name')))]"
+          }
+    }
+}

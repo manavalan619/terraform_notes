@@ -1,0 +1,14 @@
+project_resource_group_name   = "RG-TOTAL-WU-GEORGE"
+aehar_name                    = "testEventHubNamespaceAuthorization"
+aehar_listen                  = true
+aehar_send                    = false
+aehar_manage                  = false
+aehn_sku                      = "Standard"
+aehn_capacity                 = 10
+aehn_auto_inflate_enabled     = true
+aehn_maximum_throughput_units = 10
+env_code                      = "dv"
+project_name                  = "testproject"
+short_project_name            = "proj"
+resource_depends_on           = null
+resource_deploy               = true

@@ -1,0 +1,85 @@
+{
+    "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+	"parameters": {
+		"sta_job_name": {
+		  "defaultValue": "nada-StreamAnalytics",
+		  "type": "string"
+		},
+		"sta_output_error_policy": {
+		  "defaultValue": "Stop",
+		  "type": "string"
+		},
+		"sta_events_late_arrival_max_delay_in_seconds": {
+		  "defaultValue": 60,
+		  "type": "string"
+		},
+		"sta_data_locale": {
+		  "defaultValue": "en-US",
+		  "type": "string"
+		},
+		"sta_compatibility_level": {
+		  "defaultValue": "1.0",
+		  "type": "string"
+		},
+		"sta_events_out_of_order_max_delay_in_seconds": {
+		  "defaultValue": "50",
+		  "type": "string"
+		},
+		"sta_events_out_of_order_policy": {
+		  "defaultValue": "",
+		  "type": "string"
+		},
+		"sta_streaming_units": {
+		  "defaultValue": "1",
+		  "type": "string"
+		},
+		"sta_transformation_query": {
+		  "defaultValue": "SELECT * INTO adlsnor FROM xiotmessages",
+		  "type": "string"
+		}
+	},
+    "variables": {
+		"int_sta_events_late_arrival_max_delay_in_seconds": "[int(parameters('sta_events_late_arrival_max_delay_in_seconds'))]",
+		"int_sta_events_out_of_order_max_delay_in_seconds": "[int(parameters('sta_events_out_of_order_max_delay_in_seconds'))]",
+		"int_sta_streaming_units": "[int(parameters('sta_streaming_units'))]"
+    }, 
+    "resources": [
+        {
+            "apiVersion": "2019-06-01",
+            "name": "[parameters('sta_job_name')]",
+            "location": "[resourceGroup().location]",
+			"type": "Microsoft.StreamAnalytics/streamingjobs",
+            "identity": {
+                "type": "systemAssigned"
+            },
+            "properties": {
+                "sku": {
+                    "name": "standard"
+                },
+                "outputErrorPolicy": "[parameters('sta_output_error_policy')]",
+                "eventsLateArrivalMaxDelayInSeconds": "[variables('int_sta_events_late_arrival_max_delay_in_seconds')]",
+                "dataLocale": "[parameters('sta_data_locale')]",
+                "compatibilityLevel": "[parameters('sta_compatibility_level')]",
+				"eventsOutOfOrderMaxDelayInSeconds": "[variables('int_sta_events_out_of_order_max_delay_in_seconds')]",
+				"eventsOutOfOrderPolicy": "[parameters('sta_events_out_of_order_policy')]",
+                "inputs": [],
+				"outputs":[],
+				"transformation": {
+				  "name": "sta_transformation_query",
+				  "properties": {
+					"streamingUnits": "[variables('int_sta_streaming_units')]",
+					"query": "[parameters('sta_transformation_query')]"
+				  }
+				}
+            }
+        }
+    ],
+  "outputs":
+    {
+      "stream_analytics_job_id": {
+        "type": "string",
+        "value": "[trim(resourceId('Microsoft.StreamAnalytics/streamingjobs', parameters('sta_job_name')))]"
+      }
+    }
+}

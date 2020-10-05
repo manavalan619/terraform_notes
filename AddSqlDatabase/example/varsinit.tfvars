@@ -1,0 +1,11 @@
+project_resource_group_name            = "RG-TOTAL-WU-GEORGE"
+sqlsrv_name                            = "sqlsrv-dv-test-george"
+sqldb_edition                          = "Standard"
+resource_deploy                        = true
+resource_depends_on                    = ""
+project_name                           = "testproj"
+env_code                               = "dv"
+short_project_name                     = "test"
+sqldb_requested_service_objective_name = null
+resource_index                         = "1"
+location_code                          = "ne"

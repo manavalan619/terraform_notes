@@ -1,0 +1,9 @@
+project_resource_group_name       = "RG-TOTAL-WU-GEORGE"
+avnet1_name                       = "avnet-dv-test-george-1"
+avnet2_name                       = "avnet-dv-test-george-2"
+avnp_name                         = "avnp-dv-test-george"
+avnp_allow_virtual_network_access = true
+avnp_allow_forwarded_traffic      = false
+avnp_allow_gateway_transit        = false
+avnp_use_remote_gateways          = false
+resource_deploy                   = true

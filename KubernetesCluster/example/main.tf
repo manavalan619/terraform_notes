@@ -1,0 +1,22 @@
+#Creates AKS module
+module "aks" {
+  source                         = "git::https://__GIT-TOKEN__@dev.azure.com/TotalDataLake/REF-DEF-DEVOPS/_git/REF-TF-MODULES//providers/azure/KubernetesCluster"
+  project_resource_group_name    = var.project_resource_group_name
+  aks_name                       = var.aks_name
+  aks_dns_prefix                 = var.aks_dns_prefix
+  aks_version                    = var.aks_version
+  aks_rbac_aad_client_app_id     = var.aks_rbac_aad_client_app_id
+  aks_rbac_aad_server_app_id     = var.aks_rbac_aad_server_app_id
+  aks_rbac_aad_server_app_secret = var.aks_rbac_aad_server_app_secret
+  aks_sp_client_id               = var.aks_sp_client_id
+  aks_sp_secret                  = var.aks_sp_secret
+  aks_agent_count                = var.aks_agent_count
+  aks_agent_vm_size              = var.aks_agent_vm_size
+  aks_agent_os_disk_size         = var.aks_agent_os_disk_size
+  aks_vnet_subnet_id             = var.aks_vnet_subnet_id
+  aks_service_cidr               = var.aks_service_cidr
+  aks_dns_service_ip             = var.aks_dns_service_ip
+  aks_docker_bridge_cidr         = var.aks_docker_bridge_cidr
+  resource_depends_on            = var.resource_depends_on
+  resource_deploy                = var.resource_deploy
+}

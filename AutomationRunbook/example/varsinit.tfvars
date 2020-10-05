@@ -1,0 +1,12 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+project_name                = "testproj"
+env_code                    = "dv"
+short_project_name          = "test"
+resource_index              = 1
+aar_log_verbose             = "false"
+aar_log_progress            = "false"
+aar_description             = "This is an example runbook"
+aar_runbook_type            = "PowerShell"
+aar_uri                     = "https://raw.githubusercontent.com/Azure/azure-quickstart-templates/c4935ffb69246a6058eb24f54640f53f69d3ac9f/101-automation-runbook-getvms/Runbooks/Get-AzureVMTutorial.ps1"
+resource_deploy             = true
+location_code               = "ne"

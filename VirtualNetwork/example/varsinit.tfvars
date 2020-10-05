@@ -1,0 +1,9 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+avnet_address_space         = ["10.0.0.0/16"]
+avnet_dns_servers           = ["10.0.0.4", "10.0.0.5"]
+resource_deploy             = true
+env_code                    = "dv"
+project_name                = "testproject"
+short_project_name          = "proj"
+andpl_name                  = "testprojet"
+location_code               = "ne"

@@ -1,0 +1,12 @@
+project_resource_group_name   = "RG-TOTAL-WU-GEORGE"
+asa_kind                      = "StorageV2"
+asa_enable_https_traffic_only = true
+project_name                  = "testproject"
+env_code                      = "dv"
+short_project_name            = "test"
+resource_deploy               = true
+asa_account_tier              = "Standard"
+asa_account_replication_type  = "LRS"
+asa_access_tier               = "Hot"
+asa_is_hns_enabled            = false
+location_code                 = "ne"

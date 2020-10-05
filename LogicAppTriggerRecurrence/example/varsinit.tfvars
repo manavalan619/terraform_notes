@@ -1,0 +1,11 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+resource_deploy             = true
+alaw_name                   = "alaw-dv-test-george"
+project_name                = "testproj"
+env_code                    = "dv"
+short_project_name          = "test"
+resource_index              = 1
+location_code               = "ne"
+alatr_frequency             = "Day"
+alatr_interval              = 1
+alatr_start_time            = "2021-01-02T03:04:05Z"

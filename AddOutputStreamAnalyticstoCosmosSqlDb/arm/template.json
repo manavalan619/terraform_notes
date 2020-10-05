@@ -1,0 +1,58 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "sta_job_name": {
+          "defaultValue": "",
+          "type": "String"
+      },
+      "sta_outputcosmosdb_name": {
+          "defaultValue": "",
+          "type": "String"
+      },
+      "accountId": {
+          "defaultValue": "",
+          "type": "String"
+      },
+      "accountKey": {
+          "defaultValue": "",
+          "type": "String"
+      },
+      "database": {
+          "defaultValue": "",
+          "type": "String"
+      },
+      "collectionNamePattern": {
+          "defaultValue": "",
+          "type": "String"
+      }
+    },
+    "variables": {},
+    "resources": [
+      {
+          "type": "Microsoft.StreamAnalytics/streamingjobs/outputs",
+          "apiVersion": "2016-03-01",
+          "name": "[concat(parameters('sta_job_name'), '/',parameters('sta_outputcosmosdb_name'))]",
+          "dependsOn": [
+              
+          ],
+          "properties": {
+              "datasource": {
+                  "type": "Microsoft.Storage/DocumentDB",
+                  "properties": {
+                      "accountId": "[parameters('accountId')]",
+                      "accountKey": "[parameters('accountKey')]",
+                      "database": "[parameters('database')]",
+                      "collectionNamePattern": "[parameters('collectionNamePattern')]"
+                  }
+              }
+          }
+      }
+    ],
+    "outputs": {
+        "sta_output_CosmosdbSql_id": {
+            "type": "string",
+            "value": "[trim(resourceId('Microsoft.StreamAnalytics/streamingjobs/outputs', parameters('sta_job_name'), parameters('sta_outputcosmosdb_name')))]"
+          }
+    }
+  }

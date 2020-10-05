@@ -1,0 +1,9 @@
+project_resource_group_name         = "RG-TOTAL-WU-GEORGE"
+project_name                        = "testproj"
+resource_deploy_integration_runtime = false
+short_project_name                  = "test"
+env_code                            = "dv"
+resource_index                      = 1
+resource_deploy                     = true
+vsts_configuration                  = null
+location_code                       = "ne"

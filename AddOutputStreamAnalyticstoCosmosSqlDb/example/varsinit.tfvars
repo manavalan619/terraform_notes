@@ -1,0 +1,10 @@
+project_resource_group_name  = "RG-TOTAL-WU-GEORGE"
+sta_job_name                 = "sampledemo"
+sta_outputcosmosdb_name      = "template-01"
+arm_template_deployment_name = "acctesttemplate-03"
+accountId                    = ""
+accountKey                   = "stream"
+database                     = "streamtemplate"
+collectionNamePattern        = "model"
+resource_deploy              = true
+resource_depends_on          = null

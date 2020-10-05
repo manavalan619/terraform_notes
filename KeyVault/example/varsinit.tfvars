@@ -1,0 +1,11 @@
+project_resource_group_name         = "RG-TOTAL-WU-GEORGE"
+akv_sku_name                        = "standard"
+project_name                        = "testproj"
+akv_enabled_for_deployment          = false
+akv_enabled_for_template_deployment = false
+akv_soft_delete_enabled             = true
+akv_purge_protection_enabled        = true
+short_project_name                  = "test"
+env_code                            = "dv"
+resource_deploy                     = true
+location_code                       = "ne"

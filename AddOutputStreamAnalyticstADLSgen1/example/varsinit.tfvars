@@ -1,0 +1,10 @@
+project_resource_group_name      = "RG-TOTAL-WU-GEORGE"
+rg_tf_name                       = "RG-TOTAL-WU-GEORGE"
+akv_tf_name                      = "akv-tf-dv-ne-testproj"
+sta_adls_output_deployment_name  = "TestADLSDeployment"
+sta_job_name                     = "sta-dv-test-george"
+sta_output_adls_name             = "testOutputADLS"
+sta_output_adls_file_Path_Prefix = "testPathPrefix"
+adls_name                        = "testadls"
+resource_deploy                  = true
+resource_depends_on              = null

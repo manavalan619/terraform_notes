@@ -1,0 +1,15 @@
+project_resource_group_name              = "RG-TOTAL-WU-GEORGE"
+aasp_name                                = "aasp-dv-test-george"
+plan_sku_tier                            = "Standard"
+plan_sku_size                            = "S1"
+aas_site_config_dotnet_framework_version = "v2.0"
+aas_site_config_scm_type                 = "LocalGit"
+aas_connection_string_name               = "Database"
+aas_connection_string_type               = "SQLServer"
+aas_connection_string_value              = "Server=some-server.mydomain.com;Integrated Security=SSPI"
+resource_deploy                          = true
+project_name                             = "testproj"
+short_project_name                       = "test"
+env_code                                 = "dv"
+resource_index                           = 1
+location_code                            = "ne"

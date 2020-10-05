@@ -1,0 +1,11 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+aehcg_namespace_name        = "testEventNamespace"
+project_name                = "testproj"
+short_project_name          = "test"
+env_code                    = "dv"
+resource_index              = 1
+location_code               = "ne"
+aehcg_eventhub_name         = "testeventhub"
+aehcg_user_metadata         = "1"
+resource_depends_on         = null
+resource_deploy             = true

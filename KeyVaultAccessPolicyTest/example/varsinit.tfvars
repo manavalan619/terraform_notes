@@ -1,0 +1,22 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+location                    = "West Europe"
+tags = {
+  Branch       = "TGS"
+  AppName      = "TERRAFORM_DEVOPS-I"
+  Exploitation = "TGITS/DEF"
+  deployment   = "terraform"
+  environment  = "dev"
+}
+akv_sku_name                        = "standard"
+project_name                        = "testproj"
+akv_enabled_for_deployment          = false
+akv_enabled_for_template_deployment = false
+akv_soft_delete_enabled             = true
+akv_purge_protection_enabled        = true
+short_project_name                  = "test"
+env_code                            = "dv"
+resource_deploy                     = true
+location_code                       = "ne"
+akv_access_policy_object_ids        = ["67e44815-2cbc-4e8c-8421-e4671905f42c"]
+akv_access_policy_security_level    = "Reader"
+resource_depends_on                 = null

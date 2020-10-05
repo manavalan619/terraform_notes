@@ -1,0 +1,11 @@
+project_resource_group_name   = "RG-TOTAL-WU-GEORGE"
+project_name                  = "testproject"
+env_code                      = "dv"
+short_project_name            = "test"
+aasp_sku_tier                 = "Dynamic"
+aasp_sku_size                 = "Y1"
+aasp_sku_capacity             = "10"
+aasp_kind                     = "FunctionApp"
+aasp_max_elastic_worker_count = "30"
+resource_deploy               = true
+location_code                 = "ne"

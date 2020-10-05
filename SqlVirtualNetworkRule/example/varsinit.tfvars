@@ -1,0 +1,9 @@
+project_resource_group_name                = "RG-TOTAL-WU-GEORGE"
+avnet_name                                 = "avnet-dv-test-george"
+subnet_name                                = "subnet-dv-test-george"
+sqlsrv_name                                = "sqlsrv-dv-test-george"
+project_name                               = "testproj"
+env_code                                   = "dv"
+short_project_name                         = "test"
+resource_deploy                            = true
+asvnr_ignore_missing_vnet_service_endpoint = false

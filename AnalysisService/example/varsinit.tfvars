@@ -1,0 +1,12 @@
+project_resource_group_name   = "RG-TOTAL-WU-GEORGE"
+short_project_name            = "test"
+aas_sku                       = "D1"
+aas_admin_users               = ["george.albert@totalazurecloud.onmicrosoft.com"]
+project_name                  = "testproj"
+env_code                      = "dv"
+aas_enable_power_bi_service   = true
+aas_querypool_connection_mode = "ReadOnly"
+aas_backup_blob_container_uri = null
+aas_ipv4_firewall_rules       = []
+resource_deploy               = true
+location_code                 = "ne"

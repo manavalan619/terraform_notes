@@ -1,0 +1,10 @@
+project_resource_group_name = "RG-TOTAL-WU-GEORGE"
+resource_deploy             = true
+asa_name                    = "asadvtestgeorge"
+asc_name                    = "asc-dv-test-george-1"
+project_name                = "testproj"
+env_code                    = "dv"
+short_project_name          = "test"
+resource_index              = 1
+asb_type                    = "Block"
+location_code               = "ne"

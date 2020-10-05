@@ -1,0 +1,13 @@
+project_resource_group_name               = "RG-TOTAL-WU-GEORGE"
+acdb_name                                 = "acdb-dv-test-george"
+project_name                              = "testproj"
+env_code                                  = "dv"
+short_project_name                        = "test"
+resource_index                            = 1
+acdb_mongo_collection_default_ttl_seconds = "1000"
+acdb_mongo_collection_shard_key           = "abc"
+acdb_mongo_collection_throughput          = 10000
+acdb_mongo_db_name                        = "acdb_mongo_db-dv-test-george-1"
+resource_deploy                           = true
+resource_depends_on                       = ""
+location_code                             = "ne"
